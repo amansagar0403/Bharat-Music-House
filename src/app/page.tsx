@@ -1,94 +1,65 @@
+"use client";
+import { useState } from "react";
 import Image from "next/image";
 import styles from "./page.module.css";
 
 export default function Home() {
+  const [optionsVisible, setOptionsVisible] = useState(false);
+
+  const toggleOptions = () => {
+    setOptionsVisible(!optionsVisible);
+  };
+
   return (
     <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+      <nav className={styles.nav}>
+        <div className={styles.innerNav}>
+          <div className={styles.logo}>
+            <img src="logo.png" alt="Logo" />
+            <h1>Bharat Music House</h1>
+          </div>
+          <div className={styles.parameter}>
+            <button>Home</button>
+            <button>About Us</button>
+            <button>Contact Us</button>
+            <button>Login/SignUp</button>
+          </div>
+          <button className={styles.hamburger} onClick={toggleOptions}>
+            &#x22EE;
+          </button>
+          {optionsVisible && (
+            <div
+              className={`${styles.optionsPanel} ${
+                optionsVisible ? styles.show : ""
+              }`}
+            >
+              <button>Home</button>
+              <button>About Us</button>
+              <button>Contact Us</button>
+              <button>Login/SignUp</button>
+            </div>
+          )}
         </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+      </nav>
+      <div className={styles.content}>
+        <div className={styles.innerContent}>
+          <div className={styles.text}>
+            <h1>WELCOME</h1>
+            <h1>
+              TO<span className={styles.bharat}> BHARAT MUSIC HOUSE</span>
+            </h1>
+            <p className={styles.details}>
+              We are 100 year old company started in Lahore (now in Pakistan).
+              With a humble and small beginning, we have now become one of the
+              largest exporters, and retailers of Indian musical instruments in
+              India.
+            </p>
+            <button className={styles.shop}>Shop Us</button>
+          </div>
+          <div className={styles.image}>
+            <img src="musicalInstument.png" alt="" />
+          </div>
+        </div>
       </div>
     </main>
   );
