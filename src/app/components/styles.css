@@ -1,0 +1,125 @@
+.Container,
+.Container2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  height: 30vh;
+  padding: 0px 100px;
+}
+
+.Container2 {
+  margin-top: 30px;
+}
+
+.TextContainer {
+  width: 60%;
+}
+
+.Title {
+  color: white;
+  font-family: "Kanit", sans-serif;
+  font-size: 60px;
+  font-weight: bold;
+  margin: 0;
+  line-height: 60px;
+  white-space: nowrap;
+  background-color: transparent;
+}
+
+.Description {
+  font-family: "Kanit", sans-serif;
+  font-size: 18px;
+  color: grey;
+  margin: 20px 0 0;
+}
+
+.Image {
+  height: 30vh;
+  background-color: transparent;
+}
+
+/* Media query for small screens (320px to 480px) */
+/* Media query for small screens (320px to 480px) */
+@media (min-width: 320px) and (max-width: 480px) {
+  .Container,
+  .Container2 {
+    flex-direction: column-reverse; /* Change to column-reverse */
+    height: auto;
+    padding: 20px;
+  }
+  .Container2 {
+    flex-direction: column;
+  }
+  .TextContainer {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .Title {
+    font-size: 30px;
+    margin-bottom: -20px;
+  }
+  .Image {
+    height: auto;
+    width: 100%;
+  }
+}
+
+/* Media query for medium screens (481px to 768px) */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .Container,
+  .Container2 {
+    flex-direction: column-reverse; /* Change to column-reverse */
+    height: auto;
+  }
+  .Container2 {
+    flex-direction: column;
+  }
+  .TextContainer {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .Title {
+    font-size: 30px;
+  }
+  .Image {
+    height: auto;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+@media (width: 540px) {
+  .Container,
+  .Container2 {
+    padding: 20px;
+  }
+}
+@media screen and (min-width: 820px) and (max-width: 1024px) {
+  .Container,
+  .Container2 {
+    flex-direction: column-reverse; /* Change to column-reverse */
+    height: auto;
+  }
+  .Container2 {
+    flex-direction: column;
+  }
+  .TextContainer {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .Title {
+    font-size: 40px;
+  }
+  .Image {
+    height: auto;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .Description {
+    font-size: 20px;
+  }
+}
