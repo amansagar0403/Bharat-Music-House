@@ -4,12 +4,28 @@ import Image from "next/image";
 import styles from "./page.module.css";
 import Whatdo from "./components/Whatdo";
 import Whatdo2 from "./components/Whatdo2";
+import Link from "next/link";
+import smoothscroll from "smoothscroll-polyfill";
+smoothscroll.polyfill();
 
 export default function Home() {
   const [optionsVisible, setOptionsVisible] = useState(false);
 
   const toggleOptions = () => {
     setOptionsVisible(!optionsVisible);
+  };
+  const scrollToSection = (sectionId: string) => {
+    // Check if window is defined (i.e., if code is running in a browser environment)
+    if (typeof window !== "undefined") {
+      const section = document.getElementById(sectionId);
+      if (section) {
+        const offsetTop = section.offsetTop;
+        window.scrollTo({
+          top: offsetTop,
+          behavior: "smooth",
+        });
+      }
+    }
   };
 
   return (
@@ -22,8 +38,10 @@ export default function Home() {
           </div>
           <div className={styles.parameter}>
             <button>Home</button>
-            <button>About Us</button>
-            <button>Contact Us</button>
+            <button onClick={() => scrollToSection("vision")}>About Us</button>
+            <button onClick={() => scrollToSection("contact")}>
+              Contact Us
+            </button>
             <button>Login/SignUp</button>
           </div>
           <button className={styles.hamburger} onClick={toggleOptions}>
@@ -36,7 +54,9 @@ export default function Home() {
               }`}
             >
               <button>Home</button>
-              <button>About Us</button>
+              <button onClick={() => scrollToSection("vision")}>
+                About Us
+              </button>
               <button>Contact Us</button>
               <button>Login/SignUp</button>
             </div>
@@ -116,7 +136,105 @@ inventory and expert support."
             />
           </div>
         </div>
-        <div className="vision"></div>
+        <div className={styles.vision} id="vision">
+          <div className={styles.innervision}>
+            <h1 className={styles.heading}>Our Vision</h1>
+            <p className={styles.details}>
+              At Bharat Music House, our vision is to empower creativity and
+              innovation in the world of music and sound. We strive to be the
+              leading provider of top-quality instruments, cutting-edge studio
+              equipment, and comprehensive soundproofing solutions. By offering
+              flexible rental options and expert guidance, we aim to support
+              artists, producers, and enthusiasts at every stage of their
+              journey. Our commitment is to create an environment where
+              creativity thrives, enabling our clients to produce exceptional
+              soundscapes that inspire and resonate with audiences worldwide.
+            </p>
+          </div>
+        </div>
+        <div className={styles.vision}>
+          <div className={styles.innerWhyus}>
+            <h1 className={styles.heading}>Why us?</h1>
+            <div className={styles.whyus}>
+              <div className={styles.dedicatedservie}>
+                <img src="quality.png" alt="" />
+                <h1>NO.1 Quality</h1>
+              </div>
+              <div className={styles.dedicatedservie}>
+                <img src="support.png" alt="" />
+                <h1>Dedicated Service</h1>
+              </div>
+              <div className={styles.dedicatedservie}>
+                <img src="affordable.png" alt="" />
+                <h1>Affordable</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className={styles.vision}>
+          <div className={styles.innervision}>
+            <h1 className={styles.heading}>Collaborate with us</h1>
+            <p className={styles.details}>
+              We are passionate about fostering a creative and innovative
+              environment in the music and sound industry. We are seeking
+              enthusiastic and talented individuals to join our team. By
+              partnering with us, you'll become part of a dynamic workplace that
+              values teamwork, creativity, and excellence. We offer a
+              collaborative atmosphere where your skills and ideas can thrive.
+              Join us in shaping the future of sound and be a part of something
+              extraordinary
+            </p>
+            <button className={styles.shop}>Contact us!</button>
+          </div>
+        </div>
+        <div className={styles.vision} id="contact">
+          <div className={styles.contact}>
+            <div className={`${styles.whyus} ${styles.contactus} `}>
+              <div className={styles.dedicatedservice}>
+                <h1>Store Information</h1>
+                <p className={styles.details}>
+                  New Bharat Music House
+                  <br />
+                  B-113, Lajpat Nagar Part 1
+                  <br />
+                  Near Defence Colony Flyover
+                  <br />
+                  New Delhi - 110024
+                  <br />
+                  Delhi
+                  <br />
+                  India
+                </p>
+              </div>
+              <div className={styles.dedicatedservice}>
+                <h1>Our Company</h1>
+                <p className={styles.details}>
+                  Terms and Conditions
+                  <br />
+                  Privacy Policy
+                  <br />
+                  Return & Refunds Policy
+                  <br />
+                  Contact us
+                  <br />
+                  Sitemap
+                  <br />
+                </p>
+              </div>
+              <div className={styles.dedicatedservice}>
+                <h1>Contact us</h1>
+                <p className={styles.details}>
+                  Call us: 011 2981 0212
+                  <br />
+                  Email: bharat.support@gmail.com
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <h1 className={styles.details} id={styles.right}>
+          © 2024 - New Bharat Music House, All rights reserved.
+        </h1>
       </div>
     </main>
   );
