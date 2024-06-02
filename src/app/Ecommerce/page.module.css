@@ -1,0 +1,264 @@
+.main {
+  background-color: rgb(0, 0, 0);
+  width: 100vw;
+  height: 100vh;
+}
+.nav {
+  height: 10%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 2vh;
+  background-color: rgb(0, 0, 0);
+}
+.innerNav {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(0, 0, 0);
+}
+.logo {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+}
+.logo img {
+  height: 70%;
+  margin-right: 20px;
+  border: 2px solid black;
+}
+.profile {
+  width: 25%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(0, 0, 0);
+}
+.loginbtn {
+  background-color: transparent;
+  color: rgb(255, 255, 255);
+  width: 30%;
+  border: none;
+  font-size: 15px;
+  font-weight: bold;
+  font-family: "Kanit";
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+}
+.cart {
+  color: rgb(255, 255, 255);
+  background-color: transparent;
+  font-size: 20px;
+  cursor: pointer;
+  transition: color 0.5s ease-in-out;
+}
+.cart:hover,
+.loginbtn:hover {
+  color: red;
+}
+
+.panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 27%;
+  height: 100%;
+  background-color: rgb(0, 0, 0);
+  border-left: 1px solid white;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+  z-index: 2000;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  padding: 20px 10px;
+  overflow-y: scroll;
+}
+
+.panelVisible {
+  transform: translateX(0);
+}
+
+.panel h2 {
+  margin: 1rem;
+}
+
+.panel button {
+  margin: 1rem;
+  background-color: transparent;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+.mainwallpaper {
+  width: 100%;
+  height: 75vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 80px;
+  background-color: rgb(0, 0, 0);
+}
+.mainwallpaper h1 {
+  background-color: transparent;
+  font-size: 100px;
+  line-height: 1;
+  margin-top: 50px;
+  font-family: "Kanit", sans-serif;
+  color: rgb(255, 255, 255);
+}
+.mainwallpaper img {
+  background-color: transparent;
+  transform: translateY(-80px);
+}
+.products {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.productlist {
+  width: 90%;
+}
+.productlist h1 {
+  color: white;
+  background-color: transparent;
+  font-family: "Kanit", sans-serif;
+  font-size: 50px;
+}
+@media (min-width: 320px) and (max-width: 480px) {
+  .nav {
+    margin-bottom: 5vh;
+  }
+  .innerNav {
+    width: 90%;
+  }
+  .logo {
+    width: 70%;
+  }
+  .logo img {
+    height: 40px;
+  }
+  .profile {
+    width: 40%;
+  }
+  .loginbtn {
+    display: none;
+  }
+  .panel {
+    width: 70%;
+  }
+  .nav {
+    margin-bottom: 1vh;
+  }
+  .mainwallpaper h1 {
+    font-size: 55px;
+  }
+  .mainwallpaper img {
+    height: 12rem;
+    transform: translateY(-30px);
+  }
+  .mainwallpaper {
+    margin-bottom: -10em;
+  }
+  .productlist h1 {
+    font-size: 30px;
+  }
+}
+@media (min-width: 390px) and (max-width: 431px) {
+  .mainwallpaper {
+    margin-bottom: -15em;
+  }
+}
+@media (min-width: 481px) and (max-width: 768px) {
+  .nav {
+    margin-bottom: 5vh;
+  }
+  .profile {
+    width: 40%;
+  }
+  .logo img {
+    height: 40px;
+  }
+  .panel {
+    width: 60%;
+  }
+  .mainwallpaper {
+    margin-bottom: -12em;
+  }
+}
+@media (min-width: 540px) and (max-width: 540px) {
+  .logo {
+    width: 70%;
+  }
+  .profile {
+    width: 80%;
+  }
+  .logo img {
+    height: 35px;
+  }
+  .mainwallpaper h1 {
+    font-size: 55px;
+  }
+  .mainwallpaper img {
+    height: 12rem;
+    transform: translateY(-30px);
+  }
+  .productlist h1 {
+    font-size: 30px;
+  }
+}
+@media (min-width: 820px) and (max-width: 820px) {
+  .nav {
+    margin-bottom: 5vh;
+  }
+  .profile {
+    width: 40%;
+  }
+  .logo img {
+    height: 40px;
+  }
+  .panel {
+    width: 60%;
+  }
+  .mainwallpaper {
+    margin-bottom: -14em;
+  }
+}
+@media (min-width: 821px) and (max-width: 1024px) {
+  .nav {
+    margin-bottom: 5vh;
+  }
+  .profile {
+    width: 40%;
+  }
+  .logo img {
+    height: 40px;
+  }
+  .panel {
+    width: 60%;
+  }
+  .mainwallpaper {
+    margin-bottom: -14em;
+  }
+}
+@media (width: 1024px) {
+  .panel {
+    width: 40%;
+  }
+  .mainwallpaper {
+    margin-bottom: 10em;
+  }
+}
+@media (width: 1280px) {
+  .services {
+    width: 100%;
+  }
+  .profile {
+    width: 40%;
+  }
+  .panel {
+    width: 40%;
+  }
+}

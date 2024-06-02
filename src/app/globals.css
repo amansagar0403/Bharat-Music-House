@@ -7,6 +7,6 @@
   background-color: black;
   max-width: 100%;
   scrollbar-width: thin; /* Makes the scrollbar thin */
-  scrollbar-color: red black; /* thumb color followed by track color */
+  scrollbar-color: rgb(0, 0, 0) black; /* thumb color followed by track color */
   scroll-behavior: smooth;
 }

@@ -15,16 +15,13 @@ export default function Home() {
     setOptionsVisible(!optionsVisible);
   };
   const scrollToSection = (sectionId: string) => {
-    // Check if window is defined (i.e., if code is running in a browser environment)
-    if (typeof window !== "undefined") {
-      const section = document.getElementById(sectionId);
-      if (section) {
-        const offsetTop = section.offsetTop;
-        window.scrollTo({
-          top: offsetTop,
-          behavior: "smooth",
-        });
-      }
+    const section = document.getElementById(sectionId);
+    if (section) {
+      const offsetTop = section.offsetTop;
+      window.scrollTo({
+        top: offsetTop,
+        behavior: "smooth",
+      });
     }
   };
 
@@ -38,11 +35,13 @@ export default function Home() {
           </div>
           <div className={styles.parameter}>
             <button>Home</button>
+            <button onClick={() => scrollToSection("service")}>
+              Our Services
+            </button>
             <button onClick={() => scrollToSection("vision")}>About Us</button>
             <button onClick={() => scrollToSection("contact")}>
               Contact Us
             </button>
-            <button>Login/SignUp</button>
           </div>
           <button className={styles.hamburger} onClick={toggleOptions}>
             &#x22EE;
@@ -76,13 +75,15 @@ export default function Home() {
               largest exporters, and retailers of Indian musical instruments in
               India.
             </p>
-            <button className={styles.shop}>Shop Us</button>
+            <Link href={"/Ecommerce"}>
+              <button className={styles.shop}>Shop Us</button>
+            </Link>
           </div>
           <div className={styles.image}>
             <img src="musicalInstument.png" alt="" />
           </div>
         </div>
-        <div className={styles.whatdo}>
+        <div className={styles.whatdo} id="service">
           <h1 className={styles.heading}>What we do?</h1>
           <div className={styles.services}>
             <Whatdo
@@ -95,7 +96,7 @@ export default function Home() {
               description="Step into the realm of sonic excellence with our 
 premier selection of studio equipment. Elevate 
 your sound production to new heights with our 
-expertly curated gear and personalized service."
+expertly curated gear and personalized service."
               imageSrc="studio.jpg" // Update the path accordingly
             />
             <Whatdo
@@ -104,7 +105,7 @@ expertly curated gear and personalized service."
 performance with our range of professional audio 
 equipment. From stage to studio, unleash your 
 sonic potential with our top-tier gear 
-and expert guidance"
+and expert guidance"
               imageSrc="professional.webp" // Update the path accordingly
             />
             <Whatdo2
@@ -113,7 +114,7 @@ and expert guidance"
 with our comprehensive range of install and 
 commercial audio solutions. Elevate atmospheres and 
 captivate audiences with our tailored sound systems 
-and professional installations."
+and professional installations."
               imageSrc="commerical.jpg" // Update the path accordingly
             />
             <Whatdo
@@ -122,7 +123,7 @@ and professional installations."
 soundproofing and acoustic treatment solutions. Enhance 
 clarity, reduce noise, and immerse yourself in pure sound 
 with our expertly designed acoustic treatments 
-tailored to your space"
+tailored to your space"
               imageSrc="proofing.webp" // Update the path accordingly
             />
             <Whatdo2
@@ -131,7 +132,7 @@ tailored to your space"
 providing top-quality sound equipment for any 
 occasion. From concerts to conferences, ensure a 
 seamless audio experience with our extensive rental 
-inventory and expert support."
+inventory and expert support."
               imageSrc="rentals.avif" // Update the path accordingly
             />
           </div>
@@ -189,7 +190,7 @@ inventory and expert support."
         </div>
         <div className={styles.vision} id="contact">
           <div className={styles.contact}>
-            <div className={`${styles.whyus} ${styles.contactus} `}>
+            <div className={styles.whyus}>
               <div className={styles.dedicatedservice}>
                 <h1>Store Information</h1>
                 <p className={styles.details}>
@@ -224,9 +225,9 @@ inventory and expert support."
               <div className={styles.dedicatedservice}>
                 <h1>Contact us</h1>
                 <p className={styles.details}>
-                  Call us: 011 2981 0212
+                  Call us: 011 2981 0212
                   <br />
-                  Email: bharat.support@gmail.com
+                  Email: bharat.support@gmail.com
                 </p>
               </div>
             </div>
