@@ -1,18 +1,24 @@
+// Homecard.tsx
 import React from "react";
 import styles from "./Homecard.module.css";
+import { GuitarProduct } from "./types"; // Import the type
 
-const Card: React.FC = () => {
+interface HomecardProps {
+  product: GuitarProduct;
+}
+
+const Homecard: React.FC<HomecardProps> = ({ product }) => {
   return (
     <div className={styles.card}>
       <div className={styles.image}>
-        <img src="guitarcard.jpeg" alt="Guitar" />
+        <img src={product.image} alt="Guitar" />
       </div>
       <div className={styles.content}>
-        <h2>Yamaha</h2>
-        <p>guitar</p>
+        <h2>{product.brand}</h2>
+        <p>{product.title}</p>
       </div>
     </div>
   );
 };
 
-export default Card;
+export default Homecard;

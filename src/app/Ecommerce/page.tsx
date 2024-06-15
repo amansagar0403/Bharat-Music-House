@@ -10,6 +10,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import MainCarousel from "../components/HomeCarousel/mainCarousel";
 import CardCarousel from "../components/HomeCard/CardCarousel";
+import { guitar } from "../components/HomeCard/guitar";
 
 export default function Home() {
   const [panelVisible, setPanelVisible] = useState(false);
@@ -47,7 +48,11 @@ export default function Home() {
       <div>
         <MainCarousel />
         <div>
-          <CardCarousel />
+          <CardCarousel data={guitar} sectionName={"Guitar"} />
+          <CardCarousel data={guitar} sectionName={"Mic"} />
+          <CardCarousel data={guitar} sectionName={"Speakers"} />
+          <CardCarousel data={guitar} sectionName={"Trufs"} />
+          <CardCarousel data={guitar} sectionName={"Guitar"} />
         </div>
       </div>
     </main>

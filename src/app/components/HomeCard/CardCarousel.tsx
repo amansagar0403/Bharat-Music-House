@@ -2,17 +2,23 @@ import React from "react";
 import AliceCarousel from "react-alice-carousel";
 import Homecard from "./Homecard";
 import styles from "./Homecard.module.css";
-import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
-import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import { GuitarProduct } from "./types"; // Import the type
 
-const CardCarousel = () => {
+interface CardCarouselProps {
+  data: GuitarProduct[];
+  sectionName: string;
+}
+
+const CardCarousel: React.FC<CardCarouselProps> = ({ data, sectionName }) => {
   const responsive = {
     0: { items: 2 },
     720: { items: 3 },
     1024: { items: 4 },
   };
 
-  const items = [1, 1, 1, 1, 1].map((item, index) => <Homecard key={index} />);
+  const items = data
+    .slice(0, 8)
+    .map((item, index) => <Homecard key={index} product={item} />);
 
   return (
     <div className={styles.outercarousel}>
