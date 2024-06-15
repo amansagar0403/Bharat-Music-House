@@ -8,8 +8,8 @@ import {
   faBars,
   faArrowLeft,
 } from "@fortawesome/free-solid-svg-icons";
-import AliceCarousel from "react-alice-carousel";
-import "react-alice-carousel/lib/alice-carousel.css";
+import MainCarousel from "../components/HomeCarousel/mainCarousel";
+import CardCarousel from "../components/HomeCard/CardCarousel";
 
 export default function Home() {
   const [panelVisible, setPanelVisible] = useState(false);
@@ -44,25 +44,10 @@ export default function Home() {
           <FontAwesomeIcon icon={faArrowLeft} className={styles.cart} />
         </button>
       </div>
-      <div className={styles.mainwallpaper}>
-        <h1>
-          Bharat Music <br />
-          <span
-            style={{
-              color: "red",
-              backgroundColor: "transparent",
-              textShadow: "none",
-            }}
-          >
-            House
-          </span>
-        </h1>
-        <img src="guitar.png" alt="" />
-      </div>
-      <div className={styles.products}>
-        <div className={styles.productlist}>
-          <h1>Our Products</h1>
-          <hr />
+      <div>
+        <MainCarousel />
+        <div>
+          <CardCarousel />
         </div>
       </div>
     </main>

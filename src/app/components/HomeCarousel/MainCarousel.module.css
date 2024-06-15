@@ -1,0 +1,17 @@
+.carousel-container {
+  width: 90%;
+  margin: 0 auto; /* This centers the carousel horizontally */
+}
+
+.carousel-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px; /* Adjust height as needed */
+  cursor: pointer;
+}
+
+.carousel-image {
+  max-width: 100%;
+  max-height: 100%;
+}

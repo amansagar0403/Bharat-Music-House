@@ -1,0 +1,92 @@
+.outercarousel {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+.carousel {
+  width: 90%;
+  padding: 5px;
+  position: relative;
+}
+
+.card {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #000;
+  overflow: hidden;
+  width: 20vw;
+  border: 1px solid transparent;
+  transition: border 0.5s ease-in-out;
+  padding: 15px;
+}
+
+.card:hover {
+  border: 1px solid #fff;
+}
+
+.image {
+  width: 100%;
+  height: 40vh; /* Adjust height as needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Ensures the image covers the container while maintaining aspect ratio */
+}
+
+.content {
+  text-align: center;
+}
+
+.content h2 {
+  color: white;
+}
+
+.content p {
+  color: grey;
+}
+.button {
+  z-index: 50;
+  position: absolute;
+  color: rgb(254, 0, 0);
+  border: none;
+}
+@media (min-width: 320px) and (max-width: 480px) {
+  .card {
+    width: 60vw;
+  }
+  .image {
+    height: auto;
+  }
+}
+@media (min-width: 481px) and (max-width: 768px) {
+  .card {
+    width: 60vw;
+  }
+  .image {
+    height: auto;
+  }
+}
+@media (min-width: 481px) and (max-width: 768px) {
+  .card {
+    width: 60vw;
+  }
+  .image {
+    height: auto;
+  }
+}
+@media (min-width: 820px) and (max-width: 1024px) {
+  .card {
+    width: 60vw;
+  }
+  .image {
+    height: auto;
+  }
+}
