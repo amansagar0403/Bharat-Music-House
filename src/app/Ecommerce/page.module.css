@@ -91,6 +91,48 @@
   font-size: 16px;
   cursor: pointer;
 }
+.vision {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+.whyus {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+.whyus h1 {
+  font-family: "Kanit";
+}
+.contact {
+  padding-top: 40px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  color: white;
+}
+.details {
+  color: white;
+  margin: 20px 0px;
+  font-size: 24px;
+  font-family: "Kanit", sans-serif;
+  line-height: 6vh;
+}
+.dedicatedservice {
+  text-align: left;
+}
+.dedicatedservice h1 {
+  font-size: 50px;
+}
+.footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 @media (min-width: 320px) and (max-width: 480px) {
   .nav {
     margin-bottom: 5vh;
@@ -116,6 +158,21 @@
   .nav {
     margin-bottom: 1vh;
   }
+  .whyus {
+    flex-direction: column;
+  }
+  .dedicatedservice {
+    text-align: center;
+  }
+  .dedicatedservice h1 {
+    font-size: 40px;
+  }
+  .dedicatedservie img {
+    height: 30vh;
+  }
+  #right {
+    text-align: center;
+  }
 }
 @media (min-width: 390px) and (max-width: 431px) {
 }
@@ -132,6 +189,18 @@
   .panel {
     width: 60%;
   }
+  .whyus {
+    flex-direction: column;
+  }
+  .dedicatedservice {
+    text-align: center;
+  }
+  .dedicatedservice h1 {
+    font-size: 50px;
+  }
+  #right {
+    text-align: center;
+  }
 }
 @media (min-width: 540px) and (max-width: 540px) {
   .logo {
@@ -142,6 +211,18 @@
   }
   .logo img {
     height: 35px;
+  }
+  .whyus {
+    flex-direction: column;
+  }
+  .dedicatedservice {
+    text-align: center;
+  }
+  .dedicatedservice h1 {
+    font-size: 50px;
+  }
+  #right {
+    text-align: center;
   }
 }
 @media (min-width: 820px) and (max-width: 820px) {
@@ -157,6 +238,18 @@
   .panel {
     width: 60%;
   }
+  .whyus {
+    flex-direction: column;
+  }
+  .dedicatedservice {
+    text-align: center;
+  }
+  .dedicatedservice h1 {
+    font-size: 50px;
+  }
+  #right {
+    text-align: center;
+  }
 }
 @media (min-width: 821px) and (max-width: 1024px) {
   .nav {
@@ -170,6 +263,12 @@
   }
   .panel {
     width: 60%;
+  }
+  .dedicatedservice {
+    text-align: center;
+  }
+  .contactus {
+    flex-direction: column;
   }
 }
 @media (width: 1024px) {

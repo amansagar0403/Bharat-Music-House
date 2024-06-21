@@ -1,29 +1,27 @@
-.outercarousel {
-  margin-top: 50px;
-  display: flex;
+.productPage {
   justify-content: center;
-}
-.carousel {
-  width: 90%;
-  padding: 5px;
-  position: relative;
+  display: flex;
 }
 
-.card {
-  cursor: pointer;
+.productinner {
+  display: flex;
+  flex-wrap: wrap; /* Allows the items to wrap if they overflow */
+  justify-content: space-around; /* Center the items horizontally */
+}
+
+.products {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  background: #000;
-  overflow: hidden;
+  cursor: pointer;
   width: 20vw;
+  overflow: hidden;
   border: 1px solid transparent;
+  padding: 15px 0px;
   transition: border 0.5s ease-in-out;
-  padding: 15px;
 }
 
-.card:hover {
-  border: 1px solid #fff;
+.products:hover {
+  border: 1px solid white;
 }
 
 .image {
@@ -42,7 +40,9 @@
 }
 
 .content {
-  text-align: center;
+  padding-top: 5px;
+  width: 60%;
+  align-self: center;
 }
 
 .content h2 {
@@ -52,38 +52,48 @@
 .content p {
   color: grey;
 }
-/* Homecard.module.css */
-.header {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 16px;
-  color: #ffffff; /* Ensure the color is visible */
-}
 
-.header {
+.price {
+  display: flex;
   color: white;
+  justify-content: space-between;
+  width: 60%;
+  align-self: center;
 }
 @media (min-width: 320px) and (max-width: 480px) {
-  .card {
-    width: 60vw;
+  .products {
+    width: 40vw;
   }
   .image {
     height: auto;
+  }
+  .content,
+  .price {
+    width: 100%;
+    font-size: small;
   }
 }
 @media (min-width: 481px) and (max-width: 768px) {
-  .card {
-    width: 60vw;
+  .products {
+    width: 25vw;
   }
   .image {
     height: auto;
+  }
+  .content,
+  .price {
+    width: 100%;
   }
 }
 @media (min-width: 820px) and (max-width: 1024px) {
-  .card {
-    width: 60vw;
+  .products {
+    width: 25vw;
   }
   .image {
     height: auto;
+  }
+  .content,
+  .price {
+    width: 100%;
   }
 }

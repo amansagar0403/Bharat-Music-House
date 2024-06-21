@@ -7,6 +7,7 @@ import Whatdo2 from "./components/Whatdo2";
 import Link from "next/link";
 import smoothscroll from "smoothscroll-polyfill";
 smoothscroll.polyfill();
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 export default function Home() {
   const [optionsVisible, setOptionsVisible] = useState(false);
