@@ -1,6 +1,18 @@
 .productview {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.rating {
   width: 90%;
-  align-self: center;
-  padding-top: 1.5rem;
-  align-items: center;
+}
+
+@media (max-width: 1024px) {
+  .rating {
+    grid-template-columns: 1fr;
+  }
+  .productview img {
+    height: auto;
+  }
 }

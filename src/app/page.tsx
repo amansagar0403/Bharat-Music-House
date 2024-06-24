@@ -1,20 +1,23 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import styles from "./page.module.css";
 import Whatdo from "./components/Whatdo";
 import Whatdo2 from "./components/Whatdo2";
 import Link from "next/link";
-import smoothscroll from "smoothscroll-polyfill";
-smoothscroll.polyfill();
-import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 export default function Home() {
   const [optionsVisible, setOptionsVisible] = useState(false);
 
+  useEffect(() => {
+    const smoothscroll = require("smoothscroll-polyfill");
+    smoothscroll.polyfill();
+  }, []);
+
   const toggleOptions = () => {
     setOptionsVisible(!optionsVisible);
   };
+
   const scrollToSection = (sectionId: string) => {
     const section = document.getElementById(sectionId);
     if (section) {

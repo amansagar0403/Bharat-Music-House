@@ -1,0 +1,28 @@
+.page {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.orders {
+  width: 90%;
+}
+.image {
+  width: 10vh;
+  display: flex;
+  cursor: pointer;
+}
+.header {
+  font-size: 4rem;
+  color: white;
+  font-weight: bold;
+}
+.image img {
+  width: full;
+  height: full;
+  object-fit: contain;
+}
+.heading {
+  font-size: 25px;
+  color: white;
+  font-weight: bold;
+}

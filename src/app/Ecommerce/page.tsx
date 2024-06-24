@@ -14,6 +14,10 @@ import { guitar } from "../components/HomeCard/guitar";
 import Product from "../components/Products/Product";
 import { BrowserRouter } from "react-router-dom";
 import ProductDetails from "../components/ProductDetails/ProductDetails";
+import Cart from "../components/Cart/Cart";
+import Checkout from "../components/Checkout/Checkout";
+import Order from "../components/Order/Order";
+import OrderDetail from "../components/Order/OrderDetail";
 
 export default function Home() {
   const [panelVisible, setPanelVisible] = useState(false);
@@ -54,9 +58,12 @@ export default function Home() {
             <FontAwesomeIcon icon={faArrowLeft} className={styles.cart} />
           </button>
         </div>
-        <ProductDetails />
+        <OrderDetail />
+        {/* <Order /> */}
+        {/* <Checkout /> */}
+        {/* <Cart /> */}
+        {/* <ProductDetails /> */}
         {/* <Product /> */}
-        {/* Uncomment the following code if you need the carousels */}
         {/* <div>
         <MainCarousel />
         <div>

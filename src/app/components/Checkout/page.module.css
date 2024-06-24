@@ -1,0 +1,56 @@
+.address {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.left {
+  width: 50%;
+  border: 1px solid white;
+  padding: 20px;
+}
+.right {
+  width: 50%;
+  border: 1px solid white;
+  padding: 20px;
+}
+.right input {
+  width: 100%;
+  margin-bottom: 10px;
+}
+.right textarea {
+  width: 100%;
+  resize: none;
+}
+.right input[type="number"]::-webkit-inner-spin-button,
+.right input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.right input:hover {
+  border: 1px solid red;
+}
+.right textarea:hover {
+  border: 1px solid red;
+}
+.step-label {
+  color: white;
+}
+
+.step-label-active {
+  color: red;
+}
+
+.step-label-completed {
+  color: red;
+}
+@media (min-width: 320px) and (max-width: 480px) {
+  .address {
+    flex-direction: column;
+  }
+  .right {
+    width: 100%;
+  }
+  .left {
+    width: 100%;
+  }
+}
