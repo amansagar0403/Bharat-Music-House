@@ -8,7 +8,7 @@ import {
 } from "@heroicons/react/24/outline";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Avatar, Button, Menu, MenuItem } from "@mui/material";
-import { navigation } from "./Navigation";
+import { navigation } from "./Navigation.js";
 import { deepPurple } from "@mui/material/colors";
 
 function classNames(...classes) {
@@ -445,11 +445,11 @@ export default function Navigation() {
                       Signin
                     </Button>
                   )} */}
-                  <MenuItem onClick={() => navigate("/account/order")}>
+                  {/* <MenuItem onClick={() => navigate("/account/order")}>
                     {auth.user?.role === "ROLE_ADMIN"
                       ? "Admin Dashboard"
                       : "My Orders"}
-                  </MenuItem>
+                  </MenuItem> */}
                 </div>
 
                 {/* Search */}

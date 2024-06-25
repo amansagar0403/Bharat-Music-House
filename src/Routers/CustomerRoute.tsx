@@ -12,10 +12,10 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import HomePage from "@/app/customer/components/Homepage/Homepage";
 import Cart from "@/app/customer/components/Cart/Cart";
 import Product from "@/app/customer/components/Products/Product";
-import Navigation from "@/app/customer/components/Navigation/Navigation";
 import ProductDetails from "@/app/customer/components/ProductDetails/ProductDetails";
 import Checkout from "@/app/customer/components/Checkout/Checkout";
 import Order from "@/app/customer/components/Order/Order";
+import Navigation from "@/app/customer/components/Navigation/Navigation.jsx";
 import OrderDetail from "@/app/customer/components/Order/OrderDetail";
 
 const CustomerRoute = () => {
@@ -27,38 +27,8 @@ const CustomerRoute = () => {
   return (
     <div>
       <div>
-        {/* <nav className={styles.nav}>
-          <div className={styles.innerNav}>
-            <div className={styles.logo}>
-              <img src="logo.png" alt="Logo" />
-            </div>
-            <div className={styles.profile}>
-              <button className={styles.loginbtn}>Login/Signup</button>
-              <FontAwesomeIcon
-                icon={faMagnifyingGlass}
-                className={styles.cart}
-              />
-              <FontAwesomeIcon icon={faCartShopping} className={styles.cart} />
-              <FontAwesomeIcon
-                icon={faBars}
-                className={styles.cart}
-                onClick={togglePanel}
-              />
-            </div>
-          </div>
-        </nav>
-        <div
-          className={`${styles.panel} ${
-            panelVisible ? styles.panelVisible : ""
-          }`}
-        >
-          <button onClick={togglePanel}>
-            <FontAwesomeIcon icon={faArrowLeft} className={styles.cart} />
-          </button>
-        </div> */}
         <Navigation />
       </div>
-      <HomePage />
       <Routes>
         <Route path="/" element={<HomePage />}></Route>
         <Route path="/cart" element={<Cart />}></Route>

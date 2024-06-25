@@ -5,7 +5,7 @@ import styles from "./page.module.css";
 import { Button, Grid, Rating } from "@mui/material";
 import ProductReviewCard from "./ProductReviewCard";
 import { useNavigate } from "react-router-dom";
-  
+
 const product = {
   name: "Basic Tee 6-Pack",
   price: "$192",
@@ -16,7 +16,7 @@ const product = {
   ],
   images: [
     {
-      src: "https://rvb-img.reverb.com/image/upload/s--PJfsOn5---/f_auto,t_large/v1527152274/wxiwcercroxifrwxjbcy.jpg",
+      src: "guitarcard.jpeg",
       alt: "Two each of gray, white, and black shirts laying flat.",
     },
   ],
