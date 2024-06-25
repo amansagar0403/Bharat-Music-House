@@ -4,7 +4,8 @@ import { Radio, RadioGroup } from "@headlessui/react";
 import styles from "./page.module.css";
 import { Button, Grid, Rating } from "@mui/material";
 import ProductReviewCard from "./ProductReviewCard";
-
+import { useNavigate } from "react-router-dom";
+  
 const product = {
   name: "Basic Tee 6-Pack",
   price: "$192",
@@ -52,6 +53,12 @@ function classNames(...classes: string[]) {
 }
 
 export default function ProjectDetails() {
+  const navigate = useNavigate();
+
+  const handleAddToCart = () => {
+    navigate("/cart");
+  };
+
   return (
     <div>
       <div className="pt-6">
@@ -107,6 +114,7 @@ export default function ProjectDetails() {
 
                   <form className="mt-10">
                     <button
+                      onClick={handleAddToCart}
                       type="submit"
                       className="mt-10 flex w-full items-center justify-center rounded-md border border-transparent bg-red-600 px-8 py-3 text-base font-medium text-white hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2"
                     >
@@ -165,7 +173,7 @@ export default function ProjectDetails() {
                 <div className="bg-transparent">
                   <div className=" gap-5 flex flex-wrap">
                     {[1, 1, 1].map((item) => (
-                      <ProductReviewCard />
+                      <ProductReviewCard key={item} />
                     ))}
                   </div>
                 </div>

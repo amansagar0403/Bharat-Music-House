@@ -8,4 +8,8 @@ export interface GuitarProduct {
   discountPercent: number;
   category: string;
   description: string;
+  quantity: number;
+  topLevelCategory: string;
+  secondLevelCategory: string;
+  thirdLevelCategory: string;
 }

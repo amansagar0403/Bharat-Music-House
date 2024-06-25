@@ -21,6 +21,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/components/HomeCarousel/mainCarousel.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/components/HomeCarousel/mainCarousel.tsx", "src/app/customer/components/Navigation/Navigation.jsx"],
   "exclude": ["node_modules"]
 }

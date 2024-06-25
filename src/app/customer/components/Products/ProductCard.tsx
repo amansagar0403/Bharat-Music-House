@@ -1,13 +1,18 @@
 import React from "react";
 import styles from "./page.module.css";
 import { GuitarProduct } from "../HomeCard/types";
+import { useNavigate } from "react-router-dom";
 
 interface ProductCardProps {
   product: GuitarProduct;
 }
 const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
+  const navigate = useNavigate();
   return (
-    <div className={styles.productPage}>
+    <div
+      onClick={() => navigate(`/product/${5}`)}
+      className={styles.productPage}
+    >
       <div className={styles.productinner}>
         <div className={styles.products}>
           <div className={styles.image}>

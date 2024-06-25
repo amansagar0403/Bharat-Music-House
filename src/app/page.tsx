@@ -2,8 +2,8 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import styles from "./page.module.css";
-import Whatdo from "./components/Whatdo";
-import Whatdo2 from "./components/Whatdo2";
+import Whatdo from "./customer/components/Whatdo";
+import Whatdo2 from "./customer/components/Whatdo2";
 import Link from "next/link";
 
 export default function Home() {

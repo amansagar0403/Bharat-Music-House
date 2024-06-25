@@ -1,10 +1,15 @@
 import React from "react";
 import styles from "./page.module.css";
+import { useNavigate } from "react-router-dom";
 
 const OrderCard = () => {
+  const navigate = useNavigate();
   return (
     <div>
-      <div className="flex justify-between border p-5 cursor-pointer hover:border-red-500">
+      <div
+        onClick={() => navigate(`/account/order/${5}`)}
+        className="flex justify-between border p-5 cursor-pointer hover:border-red-500"
+      >
         <div className="flex">
           <div className={styles.image}>
             <img src="guitarcard.jpeg" alt="Guitar" />
