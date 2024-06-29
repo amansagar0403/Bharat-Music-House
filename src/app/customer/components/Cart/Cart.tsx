@@ -10,7 +10,7 @@ const Card = () => {
   return (
     <div className="page">
       <div className="innerpage">
-        <div className="flex flex-col lg:flex-row lg:px-16 relative">
+        <div className="flex flex-col lg:flex-row lg:px-16 relative mt-10">
           <div className="flex-1">
             {[1, 1, 1, 1].map((item) => (
               <CardItem />

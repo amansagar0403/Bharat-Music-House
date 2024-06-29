@@ -21,6 +21,14 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/components/HomeCarousel/mainCarousel.tsx", "src/app/customer/components/Navigation/Navigation.jsx"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "src/app/components/HomeCarousel/mainCarousel.tsx",
+    "src/app/customer/components/Navigation/Navigation.jsx",
+    "src/app/customer/components/Auth/AuthModal.jsx"
+, "src/app/customer/components/Auth/RegisterForm.jsx", "src/app/customer/components/Auth/LoginForm.jsx", "src/app/Ecommerce/page.jsx"  ],
   "exclude": ["node_modules"]
 }

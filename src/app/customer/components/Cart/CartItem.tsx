@@ -10,7 +10,7 @@ import { faCircleMinus } from "@fortawesome/free-solid-svg-icons";
 const CartItem = () => {
   return (
     <div className={styles.page}>
-      <div className="p-5 shadow-lg border rounded-md">
+      <div className="p-5 w-100 border rounded-md">
         <div className="flex items-center">
           <div className={styles.image}>
             <img src="guitarcard.jpeg" alt="" />

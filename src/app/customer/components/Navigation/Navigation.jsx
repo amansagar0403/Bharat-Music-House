@@ -10,6 +10,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Avatar, Button, Menu, MenuItem } from "@mui/material";
 import { navigation } from "./Navigation.js";
 import { deepPurple } from "@mui/material/colors";
+import AuthModel from "../Auth/AuthModal.jsx";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -61,16 +62,16 @@ export default function Navigation() {
   //   }
   // }, [auth.user]);
 
-  // const handleLogout = () => {
-  //   handleCloseUserMenu();
-  //   dispatch(logout());
-  // };
-  // const handleMyOrderClick = () => {
-  //   handleCloseUserMenu();
-  //   auth.user?.role === "ROLE_ADMIN"
-  //     ? navigate("/admin")
-  //     : navigate("/account/order");
-  // };
+  const handleLogout = () => {
+    handleCloseUserMenu();
+    dispatch(logout());
+  };
+  const handleMyOrderClick = () => {
+    handleCloseUserMenu();
+    auth.user?.role === "ROLE_ADMIN"
+      ? navigate("/admin")
+      : navigate("/account/order");
+  };
 
   return (
     <div className="">
@@ -394,6 +395,19 @@ export default function Navigation() {
 
               <div className="ml-auto flex items-center">
                 <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
+                  {/* <Avatar
+                    className="text-white"
+                    onClick={handleUserClick}
+                    aria-controls={open ? "basic-menu" : undefined}
+                    aria-haspopup="true"
+                    aria-expanded={open ? "true" : undefined}
+                    // onClick={handleUserClick}
+                    sx={{
+                      bgcolor: "black",
+                      color: "white",
+                      cursor: "pointer",
+                    }}
+                  ></Avatar> */}
                   {/* {auth.user ? (
                     <div>
                       <Avatar
@@ -410,8 +424,9 @@ export default function Navigation() {
                         }}
                       >
                         {auth.user?.firstName[0].toUpperCase()}
-                      </Avatar> */}
-                  {/* <Button
+                      </Avatar>
+                      <button
+                        style={{ color: "white" }}
                         id="basic-button"
                         aria-controls={open ? "basic-menu" : undefined}
                         aria-haspopup="true"
@@ -419,8 +434,8 @@ export default function Navigation() {
                         onClick={handleUserClick}
                       >
                         Dashboard
-                      </Button> */}
-                  {/* <Menu
+                      </button>
+                      <Menu
                         id="basic-menu"
                         anchorEl={anchorEl}
                         open={openUserMenu}
@@ -444,19 +459,25 @@ export default function Navigation() {
                     >
                       Signin
                     </Button>
-                  )} */}
-                  {/* <MenuItem onClick={() => navigate("/account/order")}>
+                  )}
+                  <MenuItem onClick={() => navigate("/account/order")}>
                     {auth.user?.role === "ROLE_ADMIN"
                       ? "Admin Dashboard"
                       : "My Orders"}
                   </MenuItem> */}
+                  <button
+                    onClick={handleOpen}
+                    className="text-md font-medium text-white hover:text-red-500"
+                  >
+                    SignIn
+                  </button>
                 </div>
 
                 {/* Search */}
                 <div className="flex items-center lg:ml-6">
                   <p
                     onClick={() => navigate("/products/search")}
-                    className="p-2 text-white hover:text-gray-500"
+                    className="p-2 text-white hover:text-red-500"
                   >
                     <span className="sr-only">Search</span>
 
@@ -469,26 +490,26 @@ export default function Navigation() {
 
                 {/* Cart */}
                 <div className="ml-4 flow-root lg:ml-6">
-                  <Button
+                  <button
                     onClick={() => navigate("/cart")}
                     className="group -m-2 flex items-center p-2"
                   >
                     <ShoppingBagIcon
-                      className="h-6 w-6 flex-shrink-0 text-white group-hover:text-gray-500"
+                      className="h-8 w-8 flex-shrink-0 text-white group-hover:text-red-500"
                       aria-hidden="true"
                     />
-                    <span className="ml-2 text-sm font-medium text-white group-hover:text-red-500">
-                      {/* {cart.cart?.totalItem} */}
-                    </span>
+                    {/* <span className="ml-2 text-sm font-medium text-white group-hover:text-red-500">
+                      {cart.cart?.totalItem}
+                    </span> */}
                     <span className="sr-only">items in cart, view bag</span>
-                  </Button>
+                  </button>
                 </div>
               </div>
             </div>
           </div>
         </nav>
       </header>
-      {/* <AuthModal handleClose={handleClose} open={openAuthModal} /> */}
+      <AuthModel handleClose={handleClose} open={openAuthModal} />
     </div>
   );
 }

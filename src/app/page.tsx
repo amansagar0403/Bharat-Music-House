@@ -60,8 +60,9 @@ export default function Home() {
               <button onClick={() => scrollToSection("vision")}>
                 About Us
               </button>
-              <button>Contact Us</button>
-              <button>Login/SignUp</button>
+              <button onClick={() => scrollToSection("contact")}>
+                Contact Us
+              </button>
             </div>
           )}
         </div>
@@ -162,15 +163,21 @@ inventory and expert support."
             <h1 className={styles.heading}>Why us?</h1>
             <div className={styles.whyus}>
               <div className={styles.dedicatedservie}>
-                <img src="quality.png" alt="" />
+                <div style={{ display: "flex", justifyContent: "center" }}>
+                  <img src="quality.png" alt="" />
+                </div>
                 <h1>NO.1 Quality</h1>
               </div>
               <div className={styles.dedicatedservie}>
-                <img src="support.png" alt="" />
+                <div style={{ display: "flex", justifyContent: "center" }}>
+                  <img src="support.png" alt="" />
+                </div>
                 <h1>Dedicated Service</h1>
               </div>
               <div className={styles.dedicatedservie}>
-                <img src="affordable.png" alt="" />
+                <div style={{ display: "flex", justifyContent: "center" }}>
+                  <img src="affordable.png" alt="" />
+                </div>
                 <h1>Affordable</h1>
               </div>
             </div>
@@ -196,7 +203,7 @@ inventory and expert support."
           <div className={styles.contact}>
             <div className={styles.whyus}>
               <div className={styles.dedicatedservice}>
-                <h1>Store Information</h1>
+                <h1 style={{ color: "red" }}>Store Information</h1>
                 <p className={styles.details}>
                   New Bharat Music House
                   <br />
@@ -212,7 +219,7 @@ inventory and expert support."
                 </p>
               </div>
               <div className={styles.dedicatedservice}>
-                <h1>Our Company</h1>
+                <h1 style={{ color: "red" }}>Our Company</h1>
                 <p className={styles.details}>
                   Terms and Conditions
                   <br />
@@ -227,7 +234,7 @@ inventory and expert support."
                 </p>
               </div>
               <div className={styles.dedicatedservice}>
-                <h1>Contact us</h1>
+                <h1 style={{ color: "red" }}>Contact us</h1>
                 <p className={styles.details}>
                   Call us: 011 2981 0212
                   <br />
